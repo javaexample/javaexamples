@@ -70,11 +70,9 @@ public class Change {
 	public int getChangeAmount() {
 		int totalAmount = 0; // 전체 거스름돈을 보관하는 변수
 		
-		totalAmount += changes[C10]*10;
-		totalAmount += changes[C50]*50;
-		totalAmount += changes[C100]*100;
-		totalAmount += changes[C500]*500;
- 
+		/*
+		 * Quiz-1 전체 거스름돈을 반환하는 코드를 완성해야함. 
+		 */
 		return totalAmount ;
 	}
 	
@@ -86,10 +84,9 @@ public class Change {
 	public int getCoinCount() {
 		int coinCount = 0;
 		
-		for (int i = 0; i < changes.length; i++) {
-			coinCount += changes[i];
-		}
-		
+		/*
+		 * Quiz-2 전체 동전의 개수를 반환하는 메소드 완성해야함.
+		 */
 		return coinCount;
 	}
 

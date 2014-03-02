@@ -2,6 +2,12 @@ package vmachine;
 
 import java.io.PrintStream;
 
+/**
+ * 거스름 돈을 나타내는 Change 클래스 구현을 완성해봅니다.
+ * 
+ * 이 구현을 완성하고나서 커피 자판기 예제를 풀게 됩니다.
+ *
+ */
 public class ChangeMain {
 
 	/**
