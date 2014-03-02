@@ -31,10 +31,10 @@ public class ChangeMain {
 		printChange(System.out, change );
 		
 		
-		change = new Change();
 		// 10원 3개, 100원 4개, 500원 1개
 		// -> 전체 거스름돈 930원
 		// -> 동전의 개수 8개
+		change = new Change();
 		change.setChange(Change.C10, 3);
 		change.setChange(Change.C100, 4);
 		change.setChange(Change.C500, 1);
