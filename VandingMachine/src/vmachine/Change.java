@@ -39,20 +39,6 @@ public class Change {
 		// 100원짜리 개수 설정
 		//  50원짜리 개수 설정
 		//  10원짜리 개수 설정
-		
-		int amount = money;
-		
-		changes[C500] = amount / 500 ;
-		amount -= 500 * changes[C500];
-		
-		changes[C100] = amount / 100 ;
-		amount -= 100 * changes[C100];
-		
-		changes[C50] = amount / 50 ;
-		amount -= 50 * changes[C50];
-		
-		changes[C10] = amount / 10 ;
-		amount -= 10 * changes[C10];
 	}
 	
 	public void setChange(int coinType , int counter) {
