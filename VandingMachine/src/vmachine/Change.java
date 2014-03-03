@@ -59,6 +59,37 @@ public class Change {
 	
 	private int [] changes = new int [4];
 	
+	public Change(int money) {
+		initChange( money ) ;
+	}
+	
+	/**
+	 * 주어진 거스름돈을 구성하는 동전의 개수를 changes 배열에 반영하는 코드입니다.
+	 * 
+	 * @param money
+	 */
+	private void initChange(int money ) {
+		// 아래의 작업을 하도록 이 메소드를 완성해야 합니다.
+		// 500원짜리 개수 설정
+		// 100원짜리 개수 설정
+		//  50원짜리 개수 설정
+		//  10원짜리 개수 설정
+		
+		int amount = money;
+		
+		changes[C500] = amount / 500 ;
+		amount -= 500 * changes[C500];
+		
+		changes[C100] = amount / 100 ;
+		amount -= 100 * changes[C100];
+		
+		changes[C50] = amount / 50 ;
+		amount -= 50 * changes[C50];
+		
+		changes[C10] = amount / 10 ;
+		amount -= 10 * changes[C10];
+	}
+	
 	public void setChange(int coinType , int counter) {
 		changes[coinType] = counter ;
 	}
@@ -70,9 +101,11 @@ public class Change {
 	public int getChangeAmount() {
 		int totalAmount = 0; // 전체 거스름돈을 보관하는 변수
 		
-		/*
-		 * Quiz-1 전체 거스름돈을 반환하는 코드를 완성해야함. 
-		 */
+		totalAmount += changes[C10]*10;
+		totalAmount += changes[C50]*50;
+		totalAmount += changes[C100]*100;
+		totalAmount += changes[C500]*500;
+		
 		return totalAmount ;
 	}
 	
@@ -84,9 +117,10 @@ public class Change {
 	public int getCoinCount() {
 		int coinCount = 0;
 		
-		/*
-		 * Quiz-2 전체 동전의 개수를 반환하는 메소드 완성해야함.
-		 */
+		for (int i = 0; i < changes.length; i++) {
+			coinCount += changes[i];
+		}
+		
 		return coinCount;
 	}
 
