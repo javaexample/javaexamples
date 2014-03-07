@@ -38,9 +38,13 @@ public class AppMain {
 				 *  
 				 */
 				String coffeeID = "C0" + (cmd-1);
-				Coffee coffee = machine.choose(coffeeID);
-				coffees.add(coffee);
-				System.out.println("  " + coffee.getName() + "이 나왔습니다.");
+				try {
+					Coffee coffee = machine.choose(coffeeID);
+					coffees.add(coffee);
+					System.out.println("  " + coffee.getName() + "이 나왔습니다.");
+				} catch (MachineException e) {
+					System.out.println(e.getMessage());
+				}
 			}
 			
 			printMenu(System.out, machine);
