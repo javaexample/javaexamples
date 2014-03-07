@@ -1,5 +1,9 @@
 package vmachine;
 
+/**
+ * 자판기에 등록된 커피 제품을 나타내는 클래스 
+ *
+ */
 public class Coffee {
 
 	/**
