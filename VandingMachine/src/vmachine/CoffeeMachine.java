@@ -59,22 +59,13 @@ public class CoffeeMachine {
 	 * 
 	 * @param coffeeID 특정 커피를 나타내는 값.
 	 * @return 선택된 커피의 instance를 반환.
-	 * @throws MachineException 주어진 coffeeID 에 대응하는 커피가 없을 경우에 던져짐
 	 */
-	public Coffee choose(String coffeeID) throws MachineException {
+	public Coffee choose(String coffeeID) {
 		Coffee choosenCoffee = findCoffee(coffeeID);
 		
-		if ( choosenCoffee == null) {
-			// 없는 커피
-			throw new MachineException("커피를 찾을 수 없습니다. : " + coffeeID );
-		}
-		
-		int price = choosenCoffee.getPrice();
-		
-		if ( inputMoney < price) {			
-			throw new MachineException("잔액이 부족합니다. 현재 잔액 : " + inputMoney + " , 커피 가격 : " + price );
-		}
+		int price = choosenCoffee.getPrice();		
 		inputMoney -= price ;
+		
 		return choosenCoffee ;
 	}
 	
