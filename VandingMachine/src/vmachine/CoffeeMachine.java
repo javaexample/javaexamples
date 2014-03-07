@@ -85,7 +85,15 @@ public class CoffeeMachine {
 			}
 		}
 		
-		return null;
+		throw new RuntimeException("invalid coffee id : " + id);
+	}
+
+	/**
+	 * 현재 자판기에 남아있는 금액을 출력
+	 * @return
+	 */
+	public int getCurrentAmount() {
+		return inputMoney ;
 	}
 	
 }
