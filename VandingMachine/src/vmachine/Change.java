@@ -59,6 +59,32 @@ public class Change {
 	
 	private int [] changes = new int [4];
 	
+	public Change(int money) {
+		initChange( money ) ;
+	}
+	
+	/**
+	 * 주어진 거스름돈을 구성하는 동전의 개수를 changes 배열에 반영하는 코드입니다.
+	 * 
+	 * @param money
+	 */
+	private void initChange(int money ) {
+		int cnt = money / 500 ;
+		setChange(C500, cnt);
+		money %= 500;
+		
+		cnt = money / 100 ;
+		setChange(C100, cnt);
+		money %= 100;
+		
+		cnt = money / 50 ;
+		setChange(C50, cnt);
+		money %= 50;
+		
+		cnt = money / 10 ;
+		setChange(C10, cnt);
+	}
+
 	public void setChange(int coinType , int counter) {
 		changes[coinType] = counter ;
 	}

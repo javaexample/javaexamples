@@ -72,9 +72,9 @@ public class CoffeeMachine {
 	 * 현재 남은 거스름돈을 반환해줌.
 	 */
 	public Change getChange() {
-		int remainingChange = this.inputMoney;
 		
-		return null;
+		Change change = new Change(this.inputMoney);
+		return change;
 	}
 	
 	private Coffee findCoffee ( String id) {
